@@ -1,4 +1,5 @@
 ﻿using AsciiAdventureImages;
+using System;
 
 
 
@@ -17,7 +18,10 @@ namespace AsciiAdventure
             Action3Choice1 action3Choice1 = new Action3Choice1();
             Action3Choice2 action3Choice2 = new Action3Choice2();
             Action4Choice1 action4Choice1 = new Action4Choice1();
-            //testagain
+            Action4Choice2 action4Choice2 = new Action4Choice2();
+            Action5Choice1 action5Choice1 = new Action5Choice1();
+            Action8Choice1 action8Choice1 = new Action8Choice1();
+            
             //Above are my object instances ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -53,13 +57,29 @@ namespace AsciiAdventure
                             {
                                 action4Choice1.Choice1();
                                 string action6 = Console.ReadLine();
+
+                                if (action6 == "1")
+                                {
+
+                                }
+                                else if (action6 == "2")
+                                {
+
+                                }
                             }
                             else if (action4 == "2")//CONTINUE
                             {
-                                Console.WriteLine(images.earthArt);
-                                Console.WriteLine("You are headed away from earth into the great abyss of space...");
-
+                                action4Choice2.Choice2();
                                 string action7 = Console.ReadLine();
+
+                                if (action7 == "1")
+                                {
+
+                                }
+                                else if (action7 == "2")
+                                {
+
+                                }
                             }
                         }
                         else if (action3 == "2")//END
@@ -80,16 +100,27 @@ namespace AsciiAdventure
                         else if (action2 == "2")//CONTINUE
                         {
                             action2Choice2.Choice2();
-
                             string action5 = Console.ReadLine();
 
                             if (action5 == "1")//CONTINUE
                             {
+                                action5Choice1.Choice1();
 
+                                string action8 = Console.ReadLine();
+
+                                if (action8 == "1")//CONTINUE
+                                {
+                                    action8Choice1.Choice1();
+                                    string action9 = Console.ReadLine();
+                                }
+                                else if (action8 == "2")//END
+                                {
+                                    action3Choice2.Choice2();
+                                }
                             }
                             else if (action5 == "2")//END
                             {
-
+                                action3Choice2.Choice2();   
                             }
                         }
                     }
